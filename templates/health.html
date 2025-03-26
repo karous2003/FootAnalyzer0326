@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootAnalyzer - 智慧足鞋量測之分析系統 - 衛教知識</title>
+    <!-- 引入 Tailwind CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- 引入外部 CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='health.css') }}">
+</head>
+<body class="bg-gray-50">
+
+    <!-- 橫幅 -->
+    <div class="banner"></div>
+
+    <!-- 導航欄 -->
+    <nav>
+        <div class="navbar">
+            <div class="nav-container">
+                <div class="logo and items-center">
+                    <img src="/static/asset/logo.png" alt="Foot Icon" class="w-8 h-8 mr-2">
+                    <a href="/" class="text-xl sm:text-2xl font-semibold tracking-wide">FootAnalyzer</a>
+                </div>
+                <input class="checkbox" type="checkbox" name="" id="">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="menu-items">
+                    <a href="/" class="nav-link">首頁</a>
+                    <a href="/insole" class="nav-link">鞋墊測量</a>
+                    <a href="/hallux" class="nav-link">姆趾外翻</a>
+                    <a href="/health" class="nav-link active">衛教知識</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 衛教知識內容 -->
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">衛教知識</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 文章卡片 1 -->
+            <div class="health-card bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                <div class="flex items-start mt-2">
+                    <div class="flex-1">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">遺傳因素加後天穿錯鞋-細說拇趾外翻(上)</h2>
+                        <p class="text-gray-600 text-sm">拇趾外翻影響全球23%成人，遺傳與穿錯鞋是主因...</p>
+                        <a href="https://www.drfoot.com.tw/subChannel_view.asp?id=30" target="_blank" class="text-blue-500 hover:text-blue-700 mt-4 inline-block">閱讀更多</a>
+                    </div>
+                    <img src="/static/asset/article1.png" alt="小圖示" class="circle-image ml-4">
+                </div>
+            </div>
+            <!-- 文章卡片 2 -->
+            <div class="health-card bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                <div class="flex items-start mt-2">
+                    <div class="flex-1">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">真正的外翻角度-細說拇趾外翻(中)</h2>
+                        <p class="text-gray-600 text-sm">拇趾外翻程度依大拇趾偏移角度分級，角度越大越嚴重...</p>
+                        <a href="https://www.drfoot.com.tw/subChannel_view.asp?id=146" target="_blank" class="text-blue-500 hover:text-blue-700 mt-4 inline-block">閱讀更多</a>
+                    </div>
+                    <img src="/static/asset/article2.png" alt="小圖示" class="circle-image ml-4">
+                </div>
+            </div>
+            <!-- 文章卡片 3 -->
+            <div class="health-card bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                <div class="flex items-start mt-2">
+                    <div class="flex-1">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">足弓鞋墊可以對拇趾外翻有什麼幫助？─細說拇趾外翻(下)</h2>
+                        <p class="text-gray-600 text-sm">鞋墊以三足弓支撐分散壓力，改善姿態，減少拇趾負擔...</p>
+                        <a href="https://www.drfoot.com.tw/subChannel_view.asp?id=147" target="_blank" class="text-blue-500 hover:text-blue-700 mt-4 inline-block">閱讀更多</a>
+                    </div>
+                    <img src="/static/asset/article3.png" alt="小圖示" class="circle-image ml-4">
+                </div>
+            </div>
+            <!-- 文章卡片 4 -->
+            <div class="health-card bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                <div class="flex items-start mt-2">
+                    <div class="flex-1">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">認識量身訂製鞋</h2>
+                        <p class="text-gray-600 text-sm">量身訂製鞋以石膏取模，貼合變形腳型，均勻壓力...</p>
+                        <a href="https://www.drfoot.com.tw/subChannel_view.asp?id=82" target="_blank" class="text-blue-500 hover:text-blue-700 mt-4 inline-block">閱讀更多</a>
+                    </div>
+                    <img src="/static/asset/article4.png" alt="小圖示" class="circle-image ml-4">
+                </div>
+            </div>
+            <!-- 文章卡片 5 -->
+            <div class="health-card bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                <div class="flex items-start mt-2">
+                    <div class="flex-1">
+                        <h2 class="text-lg font-semibold text-gray-800 mb-2">從鞋底磨損狀況檢視身體疼痛問題</h2>
+                        <p class="text-gray-600 text-sm">鞋底磨損反映足部健康，影響五臟六腑與全身...</p>
+                        <a href="https://www.drfoot.com.tw/subChannel_view.asp?id=157" target="_blank" class="text-blue-500 hover:text-blue-700 mt-4 inline-block">閱讀更多</a>
+                    </div>
+                    <img src="/static/asset/article5.png" alt="小圖示" class="circle-image ml-4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="footer mt-8 sm:mt-12">
+        <div class="container mx-auto px-4 sm:px-6 py-6 sm:py-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <div>
+                    <h3 class="text-base sm:text-lg font-semibold mb-4">聯絡我們</h3>
+                    <p class="text-sm sm:text-base">
+                        <a href="https://www.drfoot.com.tw" target="_blank">Dr.Foot 達特富科技股份有限公司</a>
+                    </p>
+                    <p class="text-sm sm:text-base">
+                        <a href="tel:+88639500551">TEL：+886 3 9500551</a>
+                    </p>
+                    <p class="text-sm sm:text-base">
+                        <a href="mailto:service@drfoot.com.tw">客服信箱：service@drfoot.com.tw</a>
+                    </p>
+                    <p class="text-sm sm:text-base">
+                        <a href="https://www.google.com/maps/place/宜蘭縣五結鄉中里路18號" target="_blank">地址：宜蘭縣五結鄉中里路18號</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-base sm:text-lg font-semibold mb-4">關注我們</h3>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="https://www.facebook.com/drfoot.tw" class="hover:text-gray-300 flex items-center">
+                            <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                            Facebook
+                        </a>
+                        <a href="https://www.youtube.com/user/YilanDrFoot" class="hover:text-gray-300 flex items-center">
+                            <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.498 6.186a2.99 2.99 0 0 0-2.106-2.107C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.392.579A2.99 2.99 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.99 2.99 0 0 0 2.106 2.107C4.5 20.5 12 20.5 12 20.5s7.5 0 9.392-.579a2.99 2.99 0 0 0 2.106-2.107C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.75 15.75V8.25l6.75 3.75-6.75 3.75z" />
+                            </svg>
+                            Youtube
+                        </a>
+                        <a href="https://drfoot-tw.blogspot.com/" class="hover:text-gray-300 flex items-center">
+                            <svg class="w-5 h-5 mr-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="2" />
+                                <rect x="9" y="7" width="6" height="3" rx="1" fill="none" stroke="currentColor" stroke-width="2" />
+                                <rect x="9" y="10" width="8" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            Blog
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 sm:mt-8 text-center text-xs sm:text-sm text-gray-500">© 2017 達特富科技股份有限公司</div>
+        </div>
+    </footer>
+</body>
+</html>

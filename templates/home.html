@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <title>FootAnalyzer - 首頁</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 Tailwind CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- 外部 CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body class="homepage text-gray-100">
+    <!-- 導覽列 -->
+    <nav>
+        <div class="navbar fixed top-0 w-full z-10">
+            <div class="container nav-container">
+                <div class="logo flex items-center">
+                    <img src="/static/asset/logo.png" alt="Foot Icon" class="w-8 h-8 mr-2" a href="/" >
+                    <a href="/" class="text-xl sm:text-2xl font-semibold tracking-wide">FootAnalyzer</a>
+                </div>
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="menu-items">
+                    <a href="/" class="nav-link active">首頁</a>
+                    <a href="/insole" class="nav-link">鞋墊測量</a>
+                    <a href="/hallux" class="nav-link">姆趾外翻</a>
+                    <a href="/health" class="nav-link">衛教知識</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要內容 -->
+    <main class="pt-20 sm:pt-48 pb-8 sm:pb-16">
+        <!-- 歡迎區塊 -->
+        <section class="container mx-auto px-4 sm:px-6 text-center mt-8 sm:mt-16">
+            <h1 class="text-3xl sm:text-5xl font-bold mb-4 animate-fade-in gradient-text">歡迎使用 FootAnalyzer</h1>
+            <p class="text-base sm:text-lg text-white max-w-2xl mx-auto mb-8 gradient-text">智慧足鞋量測與分析系統</p>
+        </section>
+
+        <!-- 功能區塊 -->
+        <section id="features" class="container mx-auto px-4 sm:px-6 py-8 sm:py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+                <!-- 鞋墊測量 -->
+                <div class="feature-card flex items-center flex-col sm:flex-row text-center sm:text-left">
+                    <div class="flex-1 pr-0 sm:pr-4 mb-4 sm:mb-0">
+                        <h3 class="text-xl sm:text-2xl font-semibold mb-3">鞋墊測量</h3>
+                        <p class="text-gray-400 mb-4">上傳鞋墊影像，快速計算長度數據。</p>
+                        <a href="/insole" class="text-blue-400 hover:text-blue-300">了解更多 →</a>
+                    </div>
+                    <div class="image-circle">
+                        <a href="/insole">
+                            <img src="/static/asset/insole_icon.png" alt="鞋墊測量圖片" class="w-full h-full object-cover rounded-full">
+                        </a>
+                    </div>
+                </div>
+                <!-- 姆趾外翻 -->
+                <div class="feature-card flex items-center flex-col sm:flex-row text-center sm:text-left">
+                    <div class="flex-1 pr-0 sm:pr-4 mb-4 sm:mb-0">
+                        <h3 class="text-xl sm:text-2xl font-semibold mb-3">姆趾外翻</h3>
+                        <p class="text-gray-400 mb-4">上傳足部影像，分析姆趾外翻角度並分級。</p>
+                        <a href="/hallux" class="text-blue-400 hover:text-blue-300">了解更多 →</a>
+                    </div>
+                    <div class="image-circle">
+                        <a href="/hallux">
+                            <img src="/static/asset/hallux_icon.png" alt="姆趾外翻圖片" class="w-full h-full object-cover rounded-full">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 額外資訊區塊 -->
+        <section class="container mx-auto px-4 sm:px-6 py-8 sm:py-12 bg-gray-800 bg-opacity-50 rounded-xl max-w-3xl">
+            <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-center">
+                <a href="/health" class="text-white hover:text-blue-400 transition-colors">衛教知識</a>
+            </h3>
+            <p class="text-gray-300 text-center">了解更多足部的健康資訊。</p>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="footer mt-8 sm:mt-12">
+        <div class="container mx-auto px-4 sm:px-6 py-6 sm:py-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <div>
+                    <h3 class="text-base sm:text-lg font-semibold mb-4">聯絡我們</h3>
+                    <p class="text-gray-400 text-sm sm:text-base">
+                        <a href="https://www.drfoot.com.tw" target="_blank" class="text-gray-400 hover:text-blue-500">Dr.Foot 達特富科技股份有限公司</a>
+                    </p>
+                    <p class="text-gray-400 text-sm sm:text-base">
+                        <a href="tel:+88639500551" class="text-gray-400 hover:text-blue-500">TEL：+886 3 9500551</a>
+                    </p>
+                    <p class="text-gray-400 text-sm sm:text-base">
+                        <a href="mailto:service@drfoot.com.tw" class="text-gray-400 hover:text-blue-500">客服信箱：service@drfoot.com.tw</a>
+                    </p>
+                    <p class="text-gray-400 text-sm sm:text-base">
+                        <a href="https://www.google.com/maps/place/%E5%AE%9C%E8%98%AD%E7%B8%A3%E4%BA%94%E7%B5%90%E9%84%89%E4%B8%AD%E9%87%8C%E8%B7%AF18%E8%99%9F" target="_blank" class="text-gray-400 hover:text-blue-500">地址：宜蘭縣五結鄉中里路18號</a>
+                </div>
+                <div>
+                    <h3 class="text-base sm:text-lg font-semibold mb-4">關注我們</h3>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="https://www.facebook.com/drfoot.tw" class="text-white hover:text-gray-300 flex items-center">
+                            <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                            Facebook
+                        </a>
+                        <a href="https://www.youtube.com/user/YilanDrFoot" class="text-white hover:text-gray-300 flex items-center">
+                            <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.498 6.186a2.99 2.99 0 0 0-2.106-2.107C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.392.579A2.99 2.99 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.99 2.99 0 0 0 2.106 2.107C4.5 20.5 12 20.5 12 20.5s7.5 0 9.392-.579a2.99 2.99 0 0 0 2.106-2.107C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.75 15.75V8.25l6.75 3.75-6.75 3.75z" />
+                            </svg>
+                            Youtube
+                        </a>
+                        <a href="https://drfoot-tw.blogspot.com/" class="text-white hover:text-gray-300 flex items-center">
+                            <svg class="w-5 h-5 mr-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="2" />
+                                <rect x="9" y="7" width="6" height="3" rx="1" fill="none" stroke="currentColor" stroke-width="2" />
+                                <rect x="9" y="10" width="8" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            Blog
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 sm:mt-8 text-center text-xs sm:text-sm text-gray-500">© 2017 達特富科技股份有限公司</div>
+        </div>
+    </footer>
+</body>
+</html>
